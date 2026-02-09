@@ -1445,3 +1445,179 @@ footer {
 .hero-content>*:nth-child(5) {
   animation-delay: 0.5s;
 }
+
+/* Strategic Analysis Section */
+.expert-perspective-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.expert-card {
+  background: var(--glass-panel);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.expert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--glass-highlight);
+}
+
+.expert-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.expert-card .quote-icon {
+  color: var(--brand-blue);
+  opacity: 0.5;
+}
+
+.perspective-tag {
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-blue);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.expert-card blockquote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-white);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--brand-blue);
+}
+
+.expert-benefits {
+  display: grid;
+  gap: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.benefit-num {
+  font-weight: 700;
+  color: var(--brand-blue);
+  font-family: var(--font-sans);
+}
+
+/* ROI Calculator Styles */
+.roi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 992px) {
+  .roi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roi-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.roi-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.roi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.roi-table th,
+.roi-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.roi-table th {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.roi-table td {
+  font-size: 0.95rem;
+  color: var(--text-white);
+}
+
+.roi-table .savings-highlight {
+  color: var(--brand-green);
+  font-weight: 600;
+}
+
+.productivity-total {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.productivity-total span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.productivity-total strong {
+  font-family: var(--font-sans);
+  font-size: 2.5rem;
+  color: var(--text-white);
+}
+
+/* General improvements for existing tables */
+.comparison-table {
+  margin-top: 3rem;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .expert-perspective-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-table th,
+  .roi-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
